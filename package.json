@@ -7,6 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@gridsome/cli": "0.0.9",
     "gridsome": "^0.5.0"
   }
 }
