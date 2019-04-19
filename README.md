@@ -17,6 +17,7 @@
 ```
 
 * [ビルド設定の構成](https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/build-settings.html)
+* [ビルド設定の構成](https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/build-settings.html)
 
 # Issue
 
