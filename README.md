@@ -68,3 +68,7 @@ frontend:
   * https://master.d1g1zs535xswgk.amplifyapp.com/
 * global installをやめて、npm runを使用する
   * [僕がnpm installに-gをつけないわけ](https://qiita.com/DeployCat/items/cd456d6bea72937464f8)
+  * npm run は失敗した
+* npxならどうか？
+  * [npm 5.2.0の新機能！ 「npx」でローカルパッケージを手軽に実行しよう](https://qiita.com/tonkotsuboy_com/items/8227f5993769c3df533d)
+  
