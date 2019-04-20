@@ -10,6 +10,12 @@
       </nav>
     </header>
     <slot/>
+    <div v-if="sidebar">
+      Lets show the sidebar!
+    </div>
+    <div class="sidebar" v-if="$slots.sidebar">
+      <slot name="sidebar" /> <!-- Sidebar slot  -->
+    </div>
   </div>
 </template>
 
@@ -20,6 +26,12 @@ query {
   }
 }
 </static-query>
+
+<script>
+  export default {
+    props: ['sidebar']
+  }
+</script>
 
 <style>
 body {
