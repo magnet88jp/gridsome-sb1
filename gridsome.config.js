@@ -6,5 +6,31 @@
 
 module.exports = {
   siteName: 'Gridsome2',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Post',
+        path: 'content/posts/*.md',
+        remark: {
+          plugins: [
+            // ...local plugins
+          ]
+        }
+      }
+    }
+  ],
+
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        // ...global plugins
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
+
 }

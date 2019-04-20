@@ -8,8 +8,15 @@
 * deploy: https://master.d1g1zs535xswgk.amplifyapp.com/
 
 # TODO
-2. データソースを使って、ページを生成する
+2. チュートリアルを実施してみる
+  * [Plugins](https://gridsome.org/docs/plugins)
+    * @gridsome/source-filesystemってなんだ？
+3. データソースを使って、ページを生成する
   * [Routing for custom data sources](https://gridsome.org/docs/routing#routing-for-data-source-plugins)
+  * [gridsome-starter-blog](https://github.com/gridsome/gridsome-starter-blog)
+    * gridsome公式のブログ開始コード
+  * ページが表示されない。
+    * titleの日本語がダメだったっぽい（タイトルをアルファベットにしたら表示された
 
 # Issue
 
@@ -71,4 +78,28 @@ frontend:
   * npm run は失敗した
 * npxならどうか？
   * [npm 5.2.0の新機能！ 「npx」でローカルパッケージを手軽に実行しよう](https://qiita.com/tonkotsuboy_com/items/8227f5993769c3df533d)
-  
+  * 成功^^
+```
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        #- npm install --global @gridsome/cli
+        - npm ci
+    build:
+      commands:
+        #- npm run build
+        #NG- num run gridsome build
+        - npx gridsome build
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    #baseDirectory: /
+    baseDirectory: /dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+
+```

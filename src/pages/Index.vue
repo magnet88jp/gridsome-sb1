@@ -19,8 +19,28 @@
       This will be added to sidebar slot from the page
     </template>
 
+    <!-- List posts -->
+    <div class="posts">
+      <!--g-link v-for="edge in $page.posts.edges" :key="edge.node.path">{{ edge.node.title }}</g-link-->
+      <h2>aa</h2>
+      <div v-for="edge in $page.allPost.edges" :key="edge.node.path">{{ edge.node.title }}</div>
+    </div>
+
   </Layout>
 </template>
+
+<page-query>
+query posts {
+  allPost{
+    edges {
+      node {
+        path,
+        title
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 export default {
