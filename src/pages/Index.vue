@@ -23,7 +23,8 @@
     <div class="posts">
       <!--g-link v-for="edge in $page.posts.edges" :key="edge.node.path">{{ edge.node.title }}</g-link-->
       <h2>aa</h2>
-      <div v-for="edge in $page.allPost.edges" :key="edge.node.path">{{ edge.node.title }}</div>
+      <!--div v-for="edge in $page.allPost.edges" :key="edge.node.path">{{ edge.node.title }}</div-->
+      <g-link v-for="edge in $page.allPost.edges" :to="edge.node.path" :key="edge.node.path">{{ edge.node.title }}</g-link>
     </div>
 
   </Layout>
